@@ -1,0 +1,17 @@
+.no-retina, .is-retina, .inner {
+	font-weight: 700 !important
+}
+
+.is-retina {
+	display: none;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+	.is-retina {
+		display: inline
+	}
+
+	.no-retina {
+		display: none
+	}
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Retina detection</title>
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap@4.3.1/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/tools.css">
+</head>
+<body>
+	<div class="container mt-5">
+		<div class="jumbotron">
+			<h1 class="resolution text-center mb-5">
+				
+			</h1>
+			<p class="window">
+				Window inner browser : <span class="inner"></span>
+			</p>
+			<p class="document">
+				Document inner browser : <span class="inner"></span>
+			</p>
+			<p>
+				Is your device support retina : <span class="is-retina">Yes</span> <span class="no-retina">No</span>
+			</p>
+		</div>
+	</div>
+	<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.js"></script>
+	<script src="https://unpkg.com/bootstrap@4.3.1/dist/js/bootstrap.min.js"></script>
+	<script>
+		var resolution = $('.resolution'),
+			wdw = $('.window'),
+			dcm = $('.document');
+
+		resolution.text(window.screen.width + " x " + window.screen.height);
+
+		wdw.find('.inner').text($(window).innerWidth() + "x" + $(window).innerHeight());
+		dcm.find('.inner').text($(document).innerWidth() + "x" + $(document).innerHeight());
+	</script>
+</body>
+</html>
